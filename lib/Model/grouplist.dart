@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+
+class GroupListItem{
+  final String imageUrl;
+  final String title;
+  GroupListItem(this.title,this.imageUrl);
+}
+
+class GroupList with ChangeNotifier {
+  List<GroupListItem> _items = [
+    GroupListItem('A private Community', 'https://c8.alamy.com/comp/2CB102T/entrance-to-the-nocatee-splash-waterpark-a-private-community-waterpark-in-nocatee-florida-usa-2CB102T.jpg'),
+    GroupListItem('Cooking Corner', 'https://assets.bonappetit.com/photos/5e7a6c79edf206000862e452/1:1/w_1519,h_1519,c_limit/Cooking-Home-Collection.jpg'),
+    GroupListItem('Football/Soccer', 'https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg'),
+    GroupListItem('Native App New Features', 'https://www.tech9logy.com/wp-content/uploads/2018/09/blog-image.jpg'),
+    GroupListItem('Wordpress Pluging','https://static1.arlocdn.net/web/2019/02/12233531/Wordpress-logo1.png'),
+  ];
+
+  List<GroupListItem> get items {
+    return [..._items];
+  }
+
+}
+
